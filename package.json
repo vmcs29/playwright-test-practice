@@ -1,0 +1,20 @@
+{
+  "name": "playwright-test-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tests": "npx playwright test",
+    "tests:chrome": "npx playwright test --project=chromium",
+    "test:chrome:ui": "npx playwright test --project=chromium --ui",
+    "tests:report": "npx playwright show-report"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.53.0",
+    "@types/node": "^24.0.3"
+  }
+}
