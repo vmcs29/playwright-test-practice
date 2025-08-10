@@ -1,5 +1,7 @@
+import { Page } from "@playwright/test";
+
 export class InventoryPage {
-  constructor(private page: any) {}
+  constructor(private page: Page) {}
 
   async selectProduct(productName: string) {
     await this.page.getByText(productName).click();
@@ -10,6 +12,6 @@ export class InventoryPage {
   }
 
   async goToCart() {
-    await this.page.getByRole('link', { name: /\d/ }).click();
+    await this.page.locator('.shopping_cart_link').click();
   }
 }

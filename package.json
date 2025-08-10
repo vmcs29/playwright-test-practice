@@ -7,14 +7,16 @@
     "tests:chrome": "npx playwright test --project=chromium",
     "test:chrome:ui": "npx playwright test --project=chromium --ui",
     "tests:report": "npx playwright show-report"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@percy/cli": "^1.31.1",
+    "@percy/playwright": "^1.0.9",
     "@playwright/test": "^1.53.0",
-    "@types/node": "^24.0.3"
+    "@types/node": "^24.0.3",
+    "artillery": "^2.0.23"
   }
 }

@@ -1,7 +1,8 @@
-import { expect } from "@playwright/test";
+// In CartPage.ts
+import { expect, Page } from "@playwright/test";
 
 export class CartPage {
-  constructor(private page: any) {}
+  constructor(private page: Page) {}
 
   async verifyItemInCart(itemName: string) {
     await expect(this.page.locator('.inventory_item_name')).toHaveText(itemName);

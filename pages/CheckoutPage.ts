@@ -1,13 +1,13 @@
-import { expect } from "@playwright/test";
+import { expect, Page } from "@playwright/test";
 
 export class CheckoutPage {
-  constructor(private page: any) {}
+  constructor(private page: Page) {}
 
   async enterCustomerDetails(first: string, last: string, zip: string) {
     await this.page.getByPlaceholder('First Name').fill(first);
     await this.page.getByPlaceholder('Last Name').fill(last);
     await this.page.getByPlaceholder('Zip/Postal Code').fill(zip);
-    await this.page.getByRole('input', { name: 'Continue' }).click();
+    await this.page.getByRole('button', { name: 'Continue' }).click();
   }
 
   async finishOrder() {
